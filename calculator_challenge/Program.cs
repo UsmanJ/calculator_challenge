@@ -7,14 +7,21 @@ namespace calculator_challenge
 		public static void Main (string[] args)
 		{	
 			Start:
-			int num01;
-			int num02;
-			Console.Write ("Enter a number to be multiplied: ");
-
-			num01 = Convert.ToInt32 (Console.ReadLine ());
-			Console.Write ("Enter the number you want it to be multiplied with: ");
-			num02 = Convert.ToInt32 (Console.ReadLine ());
-			Console.WriteLine (num01 + " multiplied by "+ num02 + " is " + (num01 * num02));
+			Random rnd = new Random();
+			int num01 = rnd.Next(10);
+			int num02 = rnd.Next(10);
+			int ans = num01 * num02;
+			int guess;
+			tryAgain:
+			Console.WriteLine ("What is " + num01 + " multiplied by " + num02 + "?");
+			guess = Convert.ToInt32 (Console.ReadLine ());
+			if (ans == guess) {
+				Console.Write ("Well Done! That is the right answer!");
+			} else {
+				Console.Write ("You fucked up. Try again...\n");
+				Console.WriteLine ();
+				goto tryAgain;
+			}
 			Console.ReadKey ();
 			Console.WriteLine ();
 			goto Start;
