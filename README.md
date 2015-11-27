@@ -2,7 +2,7 @@
 
 
 
-```s
+```
 
 What is 2 multiplied by 1?
 0
