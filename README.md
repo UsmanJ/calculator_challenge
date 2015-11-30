@@ -9,7 +9,7 @@ This is my first C# project. It is a maths game which throws two random numbers 
 Technology used:
 ------
 
-* Simple C# game build in Xamarin Studio 2
+* Simple C# game built in Xamarin Studio 2
 
 Console display:
 ------
